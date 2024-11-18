@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival Música</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/app.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor contenido-header">
+        <h1>
+          <span class="first_title">Reggae</span>
+          <span class="second_title">& Dancehall </span>
+          <span class="third_title">Fest</span>
+        </h1>
+        <nav class="navegacion-principal">
+          <a class="first_a" href="#">LineUp</a>
+          <a class="second_a" href="#">Galeria</a>
+          <a class="third_a" href="#">Boletos</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="video">
+      <div class="overlay">
+        <div class="contenedor contenido-video">
+          <h2>Reggae & Dancehall Festival</h2>
+          <p>Julio 2026, CDMX, México</p>
+        </div>
+      </div>
+      <video autoplay muted loop>
+        <source src=".//video/reggae2.mp4" type="video/mp4" />
+        <source src=".//video/reggae2.webm" type="video/webm" />
+      </video>
+    </div>
+
+    <section class="sobre-festival">
+      <div class="imagen">
+        <img src="src/img/imagen_dj2.jpg" alt="Sobre Festival" />
+      </div>
+      <div class="contenido-festival">
+        <h2>Reggae & Dancehall Festival</h2>
+        <p class="fecha">Julio 2026, CMDX, México</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt
+          suscipit dignissim. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Ea deserunt suscipit dignissim. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Ea deserunt suscipit dignissim. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Ea deserunt
+          suscipit dignissim
+        </p>
+      </div>
+    </section>
+
+
+    <section id="lineup" class="lineup">
+      <h3>Line Up</h3>
+
+      <p class="dia">Viernes 21</p>
+      <div class="escenarios-contenedor contenedor">
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">Reggae</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Bob Marley</span></li>
+            <li>22:00 | <span>The Wailers</span></li>
+            <li>20:00 | <span> Peter Tosh</span></li>
+            <li>19:00 | <span>Bunny Wailer</span></li>
+            <li>18:00 | <span>Black Uhuru</span></li>
+            <li>17:00 | <span> Natiruts</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+
+        <div class="escenario bg-rojo">
+          <p class="nombre-escenario">Dancehall</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Sean Paul</span></li>
+            <li>22:00 | <span>Beenie Man</span></li>
+            <li>20:00 | <span>Sizzla</span></li>
+            <li>19:00 | <span>Elephant Man</span></li>
+            <li>18:00 | <span>Shaggy</span></li>
+            <li>17:00 | <span>Vybz Kartel</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+      </div>
+      <!--.escenarios-contenedor -->
+
+      <p class="dia">Sábado 22</p>
+      <div class="escenarios-contenedor">
+        <div class="escenario bg-rojo">
+          <p class="nombre-escenario">Reggae</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Collie Buddz</span></li>
+            <li>22:00 | <span>Dreadsquad</span></li>
+            <li>20:00 | <span> Ras Luta</span></li>
+            <li>19:00 | <span>Busy Signal</span></li>
+            <li>18:00 | <span>Tanya Stephens</span></li>
+            <li>17:00 | <span> Ohrbooten</span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+
+        <div class="escenario bg-amarillo">
+          <p class="nombre-escenario">Dancehall</p>
+
+          <ul class="calendario">
+            <li>24:00 | <span>Sister Nancy </span></li>
+            <li>22:00 | <span>Lady Ann</span></li>
+            <li>20:00 | <span>Lady G</span></li>
+            <li>19:00 | <span>Spice </span></li>
+            <li>18:00 | <span>Shelly Thunder</span></li>
+            <li>17:00 | <span>Macka Diamond </span></li>
+          </ul>
+        </div>
+        <!--.escenario-->
+      </div>
+      <!--.escenarios-contenedor -->
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h3>Galeria</h3>
+        <div class="galeria-imagenes" ></div>
+    </section>
+
+    <section id="boletos" class="contenedor-boletos">
+      <h3>Boletos</h3>
+
+      <div class="boletos">
+        <div class="pase">
+          <p class="pase-nombre">Pase 1 Día</p>
+          <header class="pase-header">
+            <p>Incluye</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Bebida Ilimitada</li>
+              <li>Camisa / Pulsera del Evento</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$100</p>
+          </footer>
+        </div>
+        <div class="pase">
+          <p class="pase-nombre">Pase 2 Días</p>
+          <header class="pase-header">
+            <p>Incluye</p>
+          </header>
+          <div class="pase-body">
+            <ul>
+              <li>Acceso a ambos escenarios</li>
+              <li>Bebida Ilimitada</li>
+              <li>Camisa / Pulsera del Evento</li>
+              <li>Acceso VIP</li>
+            </ul>
+          </div>
+          <footer class="pase-footer">
+            <p>$180</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" >
+        <p>Reggae & Dancehall Festival. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="dist/js/app.js" ></script>
+  </body>
+</html>
