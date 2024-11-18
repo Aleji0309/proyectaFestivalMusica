@@ -1,0 +1,76 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor-boletos {
+    background-color: v.$negro;
+    h3, .boletos {
+        color: v.$blanco;
+    }
+
+    .boletos {
+        @include m.contenedor;
+        @include m.tablet {
+            @include m.grid(2, 5rem)
+        }
+    }
+}
+
+.pase {
+    transition: transform .3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &-nombre {
+        font-size: 3.6rem;
+        font-weight: 900;
+        text-align: center;
+        color: v.$blanco;
+
+    }
+
+    &-header,
+    &-footer {
+        padding: .5rem;
+
+        p {
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+
+    &-header {
+        background-color: v.$rojo;
+        p {
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            padding: 1rem 0;
+            font-weight: 600;
+        }
+    }
+
+    &-body {
+        background-color: v.$verde;
+        ul {
+            @include m.resetear-lista;
+            li {
+                padding: 2rem;
+            }
+        }
+    }
+
+    &-footer {
+        background-color: v.$amarillo;
+        padding: 1.5rem;
+
+        p {
+            font-size: 2rem;
+            color: v.$negro;
+            font-weight: 900;
+            padding: 0.5rem;
+            cursor: pointer;
+            
+        }
+    }
+}
