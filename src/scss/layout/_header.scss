@@ -60,6 +60,10 @@
     color: v.$blanco;
     letter-spacing: 0.2rem;
     font-size: 2.4rem;
+
+    &.active {
+      color: v.$amarillo;
+    }
   }
 }
 
