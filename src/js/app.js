@@ -23,9 +23,13 @@ function crearGaleria() {
   const CANTIDAD_IMAGENES = 16;
 
   for (let i = 1; i <= CANTIDAD_IMAGENES; i++) {
-    const imagen = document.createElement("IMG");
-    imagen.src = `src/img/gallery/full/${i}.jpg`;
-    imagen.alt = "Imagen Galeria";
+    const imagen = document.createElement("PICTURE");
+
+    imagen.innerHTML = `
+    <source srcset="build/img/gallery/thumb/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/thumb/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/thumb/${i}.jpg" alt="imagen galeria">
+`;
 
     // Event Handler
     imagen.onclick = function () {
@@ -38,9 +42,12 @@ function crearGaleria() {
 
 // Función que genera el modal para mostrar la imagen
 function mostrarImagen(i) {
-  const imagen = document.createElement("IMG");
-  imagen.src = `src/img/gallery/full/${i}.jpg`;
-  imagen.alt = "Imagen Galeria";
+  const imagen = document.createElement("PICTURE");
+  imagen.innerHTML = `
+    <source srcset="build/img/gallery/full/${i}.avif" type="image/avif">
+    <source srcset="build/img/gallery/full/${i}.webp" type="image/webp">
+    <img loading="lazy" width="200" height="300" src="build/img/gallery/full/${i}.jpg" alt="imagen galeria">
+`;
 
   const modal = document.createElement("DIV");
   modal.classList.add("modal");
@@ -101,29 +108,29 @@ function resaltarEnlace() {
       const sectionHeight = section.clientHeight;
 
       if (window.scrollY >= sectionTop - sectionHeight / 3) {
-          actual = section.id;
+        actual = section.id;
       }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if(link.getAttribute('href') === '#' + actual ) {
-        link.classList.add('active');
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + actual) {
+        link.classList.add("active");
       }
-    })
+    });
   });
 }
 
 // Función para la transición de secciones
 function scrollNav() {
-  const navLinks = document.querySelectorAll('.navegacion-principal a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-           e.preventDefault();
-           const sectionScroll =  e.target.getAttribute('href');
-           const section = document.querySelector(sectionScroll);
+  const navLinks = document.querySelectorAll(".navegacion-principal a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const sectionScroll = e.target.getAttribute("href");
+      const section = document.querySelector(sectionScroll);
 
-           section.scrollIntoView({behavior: 'smooth'});
-      } );
+      section.scrollIntoView({ behavior: "smooth" });
     });
-  }
+  });
+}

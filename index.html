@@ -35,7 +35,7 @@
           <p>Julio 2026, CDMX, México</p>
         </div>
       </div>
-      <video autoplay muted loop>
+      <video autoplay muted loop  preload="auto">
         <source src=".//video/reggae2.mp4" type="video/mp4" />
         <source src=".//video/reggae2.webm" type="video/webm" />
       </video>
@@ -43,7 +43,12 @@
 
     <section class="sobre-festival">
       <div class="imagen">
-        <img src="src/img/imagen_dj2.jpg" alt="Sobre Festival" />
+        <picture>
+          <source srcset="build/img/imagen_dj2.avif" type="image/avif" >
+          <source srcset="build/img/imagen_dj2.webp" type="image/webp" >
+          <img width="300" height="200" loading="lazy" src="build/img/imagen_dj2.jpg" alt="Sobre Festival" />
+        </picture>
+
       </div>
       <div class="contenido-festival">
         <h2>Reggae & Dancehall Festival</h2>
